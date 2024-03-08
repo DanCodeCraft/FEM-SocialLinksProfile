@@ -1,0 +1,239 @@
+/* /////////////////////////////////// */
+/* GUIDELINES */
+/* ////////////////////////////////// */
+
+/* 
+COLORS
+Primary:
+- Green: hsl(75, 94%, 57%)
+
+Neutral:
+- White: hsl(0, 0%, 100%)
+- Grey: hsl(0, 0%, 20%)
+- Dark Grey: hsl(0, 0%, 12%)
+- Off Black: hsl(0, 0%, 8%)
+
+TYPOGRAPHY
+- Font size 
+- paragraph: 14px 0.875rem
+
+FONT FAMILY
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 600, 700
+*/
+
+/* ///////////////////////// */
+/* CSS RESET */
+/* ///////////////////////// */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  /* display: block; */
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* ///////////////////////// */
+/* VARIABLES */
+/* ///////////////////////// */
+
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --darkgrey: hsl(0, 0%, 12%);
+  --offblack: hsl(0, 0%, 8%);
+}
+
+/* ///////////////////////// */
+/* GENERAL */
+/* ///////////////////////// */
+
+html {
+  background-color: var(--offblack);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+}
+
+/* ///////////////////////// */
+/* STYLING */
+/* ///////////////////////// */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--darkgrey);
+  justify-content: center;
+  padding: 1.8rem;
+
+  height: auto;
+  min-width: fit-content;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.avatar-pic {
+  width: 5.6rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.user-name {
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.user-location {
+  color: var(--green);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.user-desc {
+  color: var(--white);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.links {
+  width: 16rem;
+}
+
+.link-btn {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.8rem;
+  list-style: none;
+  text-align: center;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: var(--grey);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--green);
+  color: var(--offblack);
+}
+.footer {
+  font-size: 0.5rem;
+  color: var(--white);
+}
