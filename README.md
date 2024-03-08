@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://github.com/DanCodeCraft/FEM-socialLinksProfile)
 - Live Site URL: [Add live site URL here](https://fem-social-links-profile-nu.vercel.app/)
 
 ## My process
